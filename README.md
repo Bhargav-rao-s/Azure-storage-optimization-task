@@ -76,13 +76,13 @@ import json
 import os
 from datetime import datetime, timedelta
 
-# Cosmos DB Configuration
+Cosmos DB Configuration
 COSMOS_ENDPOINT = os.environ["COSMOS_ENDPOINT"]
 COSMOS_KEY = os.environ["COSMOS_KEY"]
 COSMOS_DATABASE_NAME = "BillingDB"
 COSMOS_CONTAINER_NAME = "BillingRecords"
 
-# Blob Storage Configuration
+Blob Storage Configuration
 BLOB_CONNECTION_STRING = os.environ["BLOB_CONNECTION_STRING"]
 BLOB_CONTAINER_NAME = "archived-billing-records"
 
@@ -120,14 +120,14 @@ def main(mytimer: func.TimerRequest) -> None:
             except Exception as e:
                 logging.error(f"Error archiving record {record_id}: {e}")
 
-if __name__ == "__main__":
+     if __name__ == "__main__":
     # Example local execution (replace with your actual environment variables)
     os.environ["COSMOS_ENDPOINT"] = "<your_cosmos_endpoint>"
     os.environ["COSMOS_KEY"] = "<your_cosmos_key>"
     os.environ["BLOB_CONNECTION_STRING"] = "<your_blob_connection_string>"
     main(None)
     
-    '''
+    ''' 
 
 
 

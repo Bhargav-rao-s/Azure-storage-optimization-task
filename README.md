@@ -66,9 +66,11 @@ The existing read and write API endpoints for billing records remain unchanged. 
 
 
 
-# Implementation Details
-Azure Function (Python Example for Archival)
- '''sh
+# Implementation Details :
+
+Azure Function (Python Example for Archival):
+ ```sh
+ 
 import azure.functions as func
 import azure.cosmos.cosmos_client as cosmos_client
 import azure.storage.blob as blob_service
@@ -127,7 +129,7 @@ def main(mytimer: func.TimerRequest) -> None:
     os.environ["BLOB_CONNECTION_STRING"] = "<your_blob_connection_string>"
     main(None)
     
-    ''' 
+ ```
 
 
 
